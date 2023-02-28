@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app" style="color:red;font-size:20px">Hello {{msg}} <h2>张三</h2> </div>
+    <script src="dist/vue.js"></script>
+    <script>
+        // 对配置项里的所有数据进行初始化
+        let vm = new Vue({
+            el:'#app',
+            // data:{
+                
+            // },
+            data(){
+                return{
+                    msg:'hello',
+                    a:{b:20},
+                    list:[1,2,3],
+                    arr: [{a:1}]
+                }
+            }
+        })
+        // .$mount("#app")
+        // console.log(vm._data.arr.push({b:6}))
+        // console.log(vm.msg)
+        // vue初次渲染 =》 先初始化数据 =》将 模板进行编译 =》变成render() =>生成虚拟节点 =》变成真实DOM => 放到页面
+        // vue 模板编译  template render el 注意： el(必须要有，为了找到内容) 先走render() > template
+    </script>
+</body>
+</html>
